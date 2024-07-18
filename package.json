@@ -2,7 +2,13 @@
   "name": "@nxrepo-backend-services/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev": "nx run-many --target=serve --all --maxParallel=10",
+    "dev:gateway": "nx serve gateway",
+    "dev:auth": "nx serve auth",
+    "dev:notification": "nx serve notification",
+    "kill": "pkill -f 'nx'"
+  },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^10.0.2",

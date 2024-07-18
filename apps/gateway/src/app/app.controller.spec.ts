@@ -1,5 +1,4 @@
 import { Test, TestingModule } from '@nestjs/testing';
-
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
@@ -13,10 +12,10 @@ describe('AppController', () => {
     }).compile();
   });
 
-  describe('getData', () => {
-    it('should return "Hello API"', () => {
+  describe('api status', () => {
+    it('should return "API Gateway"', () => {
       const appController = app.get<AppController>(AppController);
-      expect(appController.getData()).toEqual({message: 'Hello API'});
+      expect(appController.getApiStatus()).toEqual({message: 'API Gateway', success: true});
     });
   });
 });
