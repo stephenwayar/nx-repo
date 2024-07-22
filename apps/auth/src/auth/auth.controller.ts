@@ -1,16 +1,16 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Post } from '@nestjs/common';
 import { AuthService } from './auth.service';
 
-@Controller('/api/auth') // Define base path for controller
+@Controller('/auth')
 export class AuthController {
-  constructor(private readonly authService: AuthService) { }
+  constructor(private readonly authService: AuthService) {}
 
-  @Get('/signup') // Define endpoint path relative to base path
+  @Post('/signup')
   signupUser() {
     return this.authService.signup();
   }
 
-  @Get('/signin') // Define endpoint path relative to base path
+  @Post('/signin')
   signinUser() {
     return this.authService.signin();
   }

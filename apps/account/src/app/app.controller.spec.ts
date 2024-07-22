@@ -13,9 +13,9 @@ describe('AppController', () => {
   });
 
   describe('api status', () => {
-    it('should return "Notification Service"', () => {
+    it('should return "Account service"', () => {
       const appController = app.get<AppController>(AppController);
-      expect(appController.getApiStatus()).toEqual({ message: 'Notification Service', success: true });
+      expect(appController.getApiStatus()).toEqual({ message: 'Account service', success: true });
     });
   });
 });

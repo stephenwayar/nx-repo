@@ -1,4 +1,5 @@
 import { Test } from '@nestjs/testing';
+
 import { AppService } from './app.service';
 
 describe('AppService', () => {
@@ -12,9 +13,9 @@ describe('AppService', () => {
     service = app.get<AppService>(AppService);
   });
 
-  describe('api status', () => {
-    it('should return "Notification Service"', () => {
-      expect(service.getApiStatus()).toEqual({ message: 'Notification Service', success: true });
+  describe('getData', () => {
+    it('should return "Hello API"', () => {
+      expect(service.getData()).toEqual({ message: 'Hello API' });
     });
   });
 });

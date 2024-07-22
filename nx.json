@@ -1,10 +1,7 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
-    ],
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
@@ -40,7 +37,11 @@
       "exclude": [
         "apps/gateway-e2e/**/*",
         "apps/auth-e2e/**/*",
-        "apps/notification-e2e/**/*"
+        "apps/notification-e2e/**/*",
+        "apps/account-e2e/**/*",
+        "apps/content-e2e/**/*",
+        "apps/rtc-e2e/**/*",
+        "apps/admin-e2e/**/*"
       ]
     }
   ]
